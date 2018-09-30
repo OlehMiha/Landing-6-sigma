@@ -650,6 +650,7 @@ ul.icon_ul li:hover .p1 {
 /* Block 2 (Content) */
 .block_2 {
   background: url("../img/bac_2.png") no-repeat;
+  background-size: 100%;
   background-position:center;
   padding-top: 67px;
   padding-bottom: 81px;
@@ -765,7 +766,8 @@ ul.icon_ul li:hover .p1 {
 /* Block 3 (Content) */
 .block_3 {
   background: url("../img/bac_3.jpg") no-repeat;
-  background-position:center;
+  background-position: center;
+  background-size: cover;
   padding-top: 67px;
   padding-bottom: 81px;
 }
