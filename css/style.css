@@ -900,8 +900,10 @@ ul.icon_ul li:hover .p1 {
 }
 
 .gallery {
+  position: relative;
   padding: 0 85px;
   margin-top: 20px;
+  z-index: 3;
 }
 .gallery img {
   margin: 15px;
