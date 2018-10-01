@@ -34,6 +34,18 @@
         bgParallax: true,
         bgPercent: '0%'
     });
+    $(".image-parallax-2").fallings({
+        velocity: .3,
+        initialPosition: -3200,
+        bgParallax: true,
+        bgPercent: '0%'
+    });
+    $(".image-parallax-3").fallings({
+        velocity: .3,
+        initialPosition: -4100,
+        bgParallax: true,
+        bgPercent: '0%'
+    });
 
 
     //Меню топ  

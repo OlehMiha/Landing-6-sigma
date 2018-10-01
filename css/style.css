@@ -167,7 +167,12 @@ h1 {
 .title-block .title-bot {
   font-size: 1.250em;
   color: #6f6f6f;
+  margin: 0 auto;
   margin-top: 4px;
+  max-width: 440px;
+}
+.title-block.title-block-w .title-bot {
+  color: rgba(255, 255, 255, 0.749);
 }
 
 
@@ -780,15 +785,15 @@ ul.icon_ul li:hover .p1 {
   padding: 0 70px;
 }
 
-.img_div {
+.block_3 .img_div {
   position: relative;
   width: 430px;
   height: 280px;
 }
-.img_div_r {
+.block_3 .img_div_r {
   float: right;
 }
-.img_div > img {
+.block_3 .img_div > img {
   width: 370px;
   height: 240px;
   margin: 20px 30px;
@@ -842,6 +847,89 @@ ul.icon_ul li:hover .p1 {
 .block_3_button .button_1 {
   margin-top: 10px;
 }
+
+
+/* Block 4 (Content) */
+.block_4 {
+  background: url("../img/bac_4.png") no-repeat;
+  background-size: 100%;
+  background-position:center;
+  padding-top: 66px;
+  padding-bottom: 76px;
+}
+.block_4 .title-block .title-bot {
+  line-height: 1.2;
+  margin-top: 7px;
+}
+
+.block_4_row {
+  margin-top: 75px;
+}
+.block_4_iner {
+  font-family: 'Ubuntu', sans-serif;
+}
+.block_4_iner .img_div {
+  height: 64px;
+}
+
+.block_4_iner .title {
+  font-size: 1.250em;
+  font-weight: 700;
+  margin-top: 29px;
+}
+
+.block_4_iner .text {
+  font-size: 1.063em;
+  color: #727272;
+  margin-top: 6px;
+}
+
+
+
+/* Block 5 (Content) */
+.block_5 {
+  background: url("../img/bac_5.jpg") no-repeat;
+  background-size: cover;
+  background-position:center;
+  padding-top: 66px;
+  height: 1030px;
+}
+.block_5 .title-block .title-bot {
+  line-height: 1.2;
+  margin-top: 7px;
+}
+
+.gallery {
+  padding: 0 85px;
+  margin-top: 20px;
+}
+.gallery img {
+  margin: 15px;
+}
+
+.block_5_button .button_1 {
+  margin-top: 65px;
+}
+
+
+/* Block 6 (Content) */
+.block_6 {
+  background: url("../img/bac_6.png") no-repeat;
+  background-size: 100%;
+  background-position:center;
+  padding-top: 670px;
+  height: 1030px;
+}
+.block_6 .title-block .title-bot {
+  line-height: 1.2;
+  margin-top: 7px;
+}
+
+
+
+
+
+
 
 
 
