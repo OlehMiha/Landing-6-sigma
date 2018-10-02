@@ -105,7 +105,12 @@ $('.no-click').on('click', function (e) {
         scrollingEasing: 'swing',
         offset: 82
     });
-
+    $('.menu_footer a').mPageScroll2id({
+        scrollSpeed: 900,
+        scrollEasing: 'swing',
+        scrollingEasing: 'swing',
+        offset: 82
+    });
     $('a.go_a').mPageScroll2id({
         scrollSpeed: 900,
         scrollEasing: 'swing',
@@ -320,28 +325,65 @@ $("#" + modal).modal('show');
 	
 
 //Формы  
-    $("#sps").on("click","div", function () {
+    
+$("#sps").on("click","div", function () {
+        $('#sps').modal('toggle');
+ });
+
+
+$("#manedj_form").submit(function() {
+
+    var th = $(this);
+    $.ajax({
+        type: "POST",
+        url: "zakaz.php", 
+        data: th.serialize()
+    }).done(function() {
+        
+        th.trigger("reset");
+        $('#exampleModal_1').modal('toggle');
+        setTimeout(function() {
             $('#sps').modal('toggle');
-     });
-
-
-    $("#manedj_form").submit(function() {
-
-        var th = $(this);
-        $.ajax({
-            type: "POST",
-            url: "zakaz.php", 
-            data: th.serialize()
-        }).done(function() {
-            
-            th.trigger("reset");
-            $('#exampleModal_1').modal('toggle');
-            setTimeout(function() {
-                $('#sps').modal('toggle');
-            },250);
-        });
-        return false;
+        },250);
     });
+    return false;
+});
 
+
+$("#perezvon_form").submit(function() {
+
+    var th = $(this);
+    $.ajax({
+        type: "POST",
+        url: "zakaz.php", 
+        data: th.serialize()
+    }).done(function() {
+        
+        th.trigger("reset");
+        $('#exampleModal_2').modal('toggle');
+        setTimeout(function() {
+            $('#sps').modal('toggle');
+        },250);
+    });
+    return false;
+});
+
+$("#katalog_form").submit(function() {
+
+    var th = $(this);
+    $.ajax({
+        type: "POST",
+        url: "zakaz.php", 
+        data: th.serialize()
+    }).done(function() {
+        
+        th.trigger("reset");
+        $('#exampleModal_3').modal('toggle');
+        setTimeout(function() {
+            $('#sps').modal('toggle');
+        },250);
+    });
+    return false;
+});
 
 });

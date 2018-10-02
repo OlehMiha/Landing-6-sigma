@@ -1,6 +1,6 @@
 <?php
 $my_url= $_SERVER['HTTP_HOST'];
-$to = "salonbagira2017@gmail.com";
+$to = "fire913n@gmail.com";
 $subject = $my_url . " - " . $_POST['title'] . ".";
 if($_POST['email']){
 	$email_text = ' Email: '.$_POST['email'];
