@@ -19,7 +19,19 @@ $(document).ready(function(){
   	  swipeToSlide: true,
       responsive: [
           {
-            breakpoint: 750,
+            breakpoint: 1199,
+            settings: {
+              slidesToShow: 2,
+            }
+          },
+          {
+            breakpoint: 850,
+            settings: {
+              slidesToShow: 1,
+            }
+          },
+          {
+            breakpoint: 470,
             settings: {
               arrows: false,
             }
