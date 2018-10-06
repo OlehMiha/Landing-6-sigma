@@ -96,7 +96,8 @@ a:hover {
   display: -ms-flex;
   display: flex;
 
-  width: 370px;
+  width: 100%;
+  max-width: 370px;
   height: 68px;
   border: none;
   border-radius: 5px;
@@ -116,8 +117,9 @@ a:hover {
   display: -webkit-flex;
   display: -ms-flex;
   display: flex;
-
-  width: 300px;
+  
+  width: 100%;
+  max-width: 300px;
   height: 50px;
   border: 2px solid #81b02b;
   border-radius: 25px;
@@ -279,7 +281,18 @@ h1 {
 .heder_div_iner_left {
    text-align: left;
 }
-
+.arr_up {
+  display: none;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 35px;
+  width: 100%;
+  height: 40px;
+  background: url("../img/Scroll Up _ Close.png") no-repeat;
+  background-position: center;
+  cursor: pointer;
+}
 
 ul.icon_ul {
     margin-top: 3px;
@@ -352,6 +365,15 @@ ul.icon_ul li:hover .p1 {
 
 
 /* Menu */
+.LogoBig {
+  display: none;
+  width: 123px;
+  height: 87px;
+  background: url('../img/LogoBig.png') no-repeat;
+  background-position: center;
+  background-size: contain;
+  margin: 10px auto;
+}
 .Logo {
   width: 243px;
   height: 60px;
@@ -488,8 +510,8 @@ ul.icon_ul li:hover .p1 {
 
 .button_mobi_menu {
   display: none;
-  width: 50px;
-  height: 40px;
+  width: 26px;
+  height: 21px;
   float: right;
   position: relative;
   -webkit-transform: rotate(0deg);
@@ -506,9 +528,9 @@ ul.icon_ul li:hover .p1 {
 .button_mobi_menu span {
   display: block;
   position: absolute;
-  height: 8px;
+  height: 3px;
   width: 100%;
-  background: #81b02b;
+  background: #fff;
   border-radius: 0px;
   opacity: 1;
   left: 0;
@@ -522,7 +544,7 @@ ul.icon_ul li:hover .p1 {
   transition: .25s ease-in-out;
 }
 .menu_div.scroll .button_mobi_menu span {
-  background: #81b02b;
+  background: #fff;
 }
 
 .button_mobi_menu  span:nth-child(1) {
@@ -530,15 +552,15 @@ ul.icon_ul li:hover .p1 {
 }
 
 .button_mobi_menu  span:nth-child(2),.button_mobi_menu span:nth-child(3) {
- top: 16px;
+ top: 9px;
 }
 
 .button_mobi_menu  span:nth-child(4) {
- top: 32px;
+ top: 18px;
 }
 
 .button_mobi_menu.active span:nth-child(1) {
- top: 16px;
+ top: 9px;
  width: 0%;
  left: 50%;
 }
@@ -563,49 +585,34 @@ ul.icon_ul li:hover .p1 {
  left: 50%;
 }
 
-.button_mobi_menu .buttom_menu_iner {
-  display: block;
-  width: 40px;
-  height: 2px;
-  background: #fff;
 
-  transform-origin: 0px 0px;
-  -moz-transform: rotate(0deg) translateY(0px) translateX(0px);
-  -ms-transform: rotate(0deg) translateY(0px) translateX(0px);
-  -webkit-transform: rotate(0deg) translateY(0px) translateX(0px);
-  -o-transform: rotate(0deg) translateY(0px) translateX(0px);
-  transform: rotate(0deg) translateY(0px) translateX(0px);
-  -webkit-transition: transform 1s;
-  -moz-transition: transform 1s;
-  -ms-transition: transform 1s;
-  -o-transition: transform 1s;
-  transition: transform 1s;
-}
-.button_mobi_menu .buttom_menu_iner_1 {
-  position: absolute;
-  top: 16px;
-  left: 0px;
-}
-.button_mobi_menu .buttom_menu_iner_2 {
-  position: absolute;
-  top: 32px;
-  left: 0px;
-}
-.button_mobi_menu.active .buttom_menu_iner_1 {
-  -moz-transform: rotate(27deg) translateY(-5px);
-  -ms-transform: rotate(27deg) translateY(-5px);
-  -webkit-transform: rotate(27deg) translateY(-5px);
-  -o-transform: rotate(27deg) translateY(-5px);
-  transform: rotate(27deg) translateY(-5px);
+.button_mobi_phone_block {
+  display: none;
+  width: 30px;
+  height: 30px;
+  background: #81b02b;
+  color: #fff;
+  text-align: center;
+  line-height: 30px;
+  border-radius: 50%;
+  float: right;
+  cursor: pointer;
 }
 
-.button_mobi_menu.active .buttom_menu_iner_2 {
-  -moz-transform: rotate(-27deg) translateY(3px);
-  -ms-transform: rotate(-27deg) translateY(3px);
-  -webkit-transform: rotate(-27deg) translateY(3px);
-  -o-transform: rotate(-27deg) translateY(3px);
-  transform: rotate(-27deg) translateY(3px);
+.button_mobi_phone_block:hover {
+  transform-style: preserve-3d;
+  -webkit-transform: rotateY(360deg);
+  -moz-transform: rotateY(360deg);
+  -ms-transform: rotateY(360deg);
+  -o-transform: rotateY(360deg);
+  transform: rotateY(360deg);
+  -webkit-transition: all .5s;
+  -moz-transition: all .5s;
+  -ms-transition: all .5s;
+  -o-transition: all .5s;
+      transition: all .5s;
 }
+
 
 
 .mobile_on {
@@ -642,7 +649,13 @@ ul.icon_ul li:hover .p1 {
   line-height: 1.2;
   margin-bottom: 50px;
 }
-
+.arr_down {
+  width: 100%;
+  height: 40px;
+  background: url("../img/ScrollDownArrows.png") no-repeat;
+  background-position: center;
+  margin-top: 45px;
+}
 
 /* Block 2 (Content) */
 .block_2 {

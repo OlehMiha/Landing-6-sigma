@@ -21,31 +21,6 @@
     },false);
     
     
-    //Parallax
-    $(".top-image-parallax").fallings({
-        velocity: .2,
-        initialPosition: -155,
-        bgParallax: true,
-        bgPercent: '0%'
-    });
-    $(".image-parallax").fallings({
-        velocity: .3,
-        initialPosition: -600,
-        bgParallax: true,
-        bgPercent: '0%'
-    });
-    $(".image-parallax-2").fallings({
-        velocity: .3,
-        initialPosition: -3200,
-        bgParallax: true,
-        bgPercent: '0%'
-    });
-    $(".image-parallax-3").fallings({
-        velocity: .3,
-        initialPosition: -4100,
-        bgParallax: true,
-        bgPercent: '0%'
-    });
 
 
     //Меню топ  
@@ -53,37 +28,41 @@
     $(".button_mobi_menu").on('click', function () {
         if ($(this).hasClass('active')) {
             $('.button_mobi_menu').removeClass("active");
+            $('.menu_scrollbar').removeClass("active");
             close = false;
-            $('.menu_div').removeClass("active");
             return;
         }
         $('.button_mobi_menu').addClass("active");
-        $('.menu_div').addClass("active");
+        $('.menu_scrollbar').addClass("active");
+        $('.menu_div').addClass("scroll");
             close = true;
     }); 
 
     $(".menu_top li a:not(.no-click)").on('click', function () {
         if(close == true){
             $('.button_mobi_menu').removeClass("active");
-            $('.menu_div').removeClass("active");
+            $('.menu_scrollbar').removeClass("active");
             close = false;
         }
     }); 
-  $('#table_1').on('hidden.bs.modal', function (e) {
-        $('.button_mobi_menu').removeClass("active");
-        $('.menu_div').removeClass("active");
-        close = false;
-    });
-  $('#table_2').on('hidden.bs.modal', function (e) {
-        $('.button_mobi_menu').removeClass("active");
-        $('.menu_div').removeClass("active");
-        close = false;
-    });
-  $('#table_3').on('hidden.bs.modal', function (e) {
-        $('.button_mobi_menu').removeClass("active");
-        $('.menu_div').removeClass("active");
-        close = false;
-    });
+
+    //Phone top button
+    $(".button_mobi_phone_block").on('click', function () {
+        if ($(this).hasClass('active')) {
+            $('.button_mobi_phone_block').removeClass("active");
+            $('.heder_div').removeClass("active");
+            return;
+        }
+        $('.button_mobi_phone_block').addClass("active");
+        $('.heder_div').addClass("active");
+        $('.menu_div').addClass("scroll");
+    }); 
+    $(".arr_up").on('click', function () {
+        $('.button_mobi_phone_block').removeClass("active");
+        $('.heder_div').removeClass("active");
+    }); 
+
+
 
 
 //no-click
@@ -119,21 +98,53 @@ $('.no-click').on('click', function (e) {
     });
 //Для мобильного 
     var width_el = Number(document.documentElement.clientWidth);
-    if(width_el <= 1094){
+    if(width_el <= 991){
         $('.menu_top a').mPageScroll2id({
             scrollSpeed: 900,
             scrollEasing: 'swing',
             scrollingEasing: 'swing',
-            offset: 100
+            offset: 62
         });
 
+        $('.menu_footer a').mPageScroll2id({
+            scrollSpeed: 900,
+            scrollEasing: 'swing',
+            scrollingEasing: 'swing',
+            offset: 62
+        });
         $('a.go_a').mPageScroll2id({
             scrollSpeed: 900,
             scrollEasing: 'swing',
             scrollingEasing: 'swing',
-            offset: 100
+            offset: 62
         });
-
+    } else {
+        
+        //Parallax
+        $(".top-image-parallax").fallings({
+            velocity: .2,
+            initialPosition: -155,
+            bgParallax: true,
+            bgPercent: '0%'
+        });
+        $(".image-parallax").fallings({
+            velocity: .3,
+            initialPosition: -600,
+            bgParallax: true,
+            bgPercent: '0%'
+        });
+        $(".image-parallax-2").fallings({
+            velocity: .3,
+            initialPosition: -3200,
+            bgParallax: true,
+            bgPercent: '0%'
+        });
+        $(".image-parallax-3").fallings({
+            velocity: .3,
+            initialPosition: -4100,
+            bgParallax: true,
+            bgPercent: '0%'
+        });
     }
 
 
