@@ -26,6 +26,13 @@
         width: 243px;
         margin-right: 27px;
     }
+    .menu_footer {
+        width: calc(100% - 285px);
+    }
+    .logo_footer {
+        width: 243px;
+        margin-right: 40px;
+    }
     .title-block-brush:after {
         display: none;
     }
@@ -45,20 +52,27 @@
 
 @media only screen and (max-width: 1050px) { 
     .gallery {
-        max-width: 500px;
+        max-width: 100%;
     }
     .gallery .col {
         min-width: 100%;
     }
     .gallery img {
-        margin: 7px;
-        width: calc(100% - 14px);
+        margin: 15px;
+        width: calc(100% - 30px);
     }
 }
 
 /* Большие девайсы (десктопы, <= 991px) */
 @media only screen and (max-width: 991px) { 
+    .gallery .col {
+        min-width: 100%;
+    }
 
+    .gallery img {
+        margin: 7px;
+        width: calc(100% - 14px);
+    }
     .header_all {
         position: relative;
         z-index: 5;
@@ -182,6 +196,23 @@
         counter-reset: list 0;
         margin-top: 25px;
     }
+    .menu_scrollbar:after, .menu_scrollbar:before {
+        content: '';
+        position: absolute;
+        display: block;
+        height: 100%;
+        width: 1px;
+        background: #454650;
+        top: 0;
+    }
+    .menu_scrollbar:before {
+        top: 0;
+        left: 51px;
+    }
+    .menu_scrollbar:after {
+        top: 0;
+        right: 51px;
+    }
     .menu_top:after, .menu_top:before {
         content: '';
         position: absolute;
@@ -189,14 +220,25 @@
         height: 60px;
         width: 3px;
         background: #81b02b;
+        z-index: 2;
+        -webkit-transition: all .5s;
+        -moz-transition: all .5s;
+        -ms-transition: all .5s;
+         -o-transition: all .5s;
+            transition: all .5s;
     }
     .menu_top:before {
         top: 0;
         left: 50px;
+        transform: translateY(2000px);
     }
     .menu_top:after {
         bottom: 30%;
         right: 50px;
+        transform: translateY(-2000px);
+    }
+    .menu_top.active:before, .menu_top.active:after {
+        transform: translateY(0px);
     }
     .menu_top li {
         height: auto;
@@ -227,7 +269,7 @@
         color: #4c4c59;
         width: calc(100% - 30px);
     }
-    .menu_top > li:hover > a {
+    .menu_top > li:hover > a, .menu_top > li > a.mPS2id-highlight {
         color: #fff;
     }
     .menu_top > li > a:after {
@@ -288,7 +330,6 @@
         background: #fff;
     }
     .block_2_button .button_1 {
-        margin-top: 0px;
     }
     .block_3_iner_img_block {
         order: -1;
@@ -323,6 +364,8 @@
     }
     .block_7 .row_form .button_1 {
         width: 100%;
+        min-width: 100%;
+        max-width: 100%;
     }
     .block_7 .col-input {
         max-width: auto;
