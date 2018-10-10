@@ -624,9 +624,10 @@ ul.icon_ul li:hover .p1 {
 
 /* Block 1 (Content) */
 .block_1{
+  position: relative;
   background: url("../img/bac_1.jpg") no-repeat;
   background-position:center;
-  background-size: 130%;
+  background-size: cover;
 }
 .block_1 .row{
   position: relative;
@@ -655,7 +656,41 @@ ul.icon_ul li:hover .p1 {
   background: url("../img/ScrollDownArrows.png") no-repeat;
   background-position: center;
   margin-top: 45px;
+  position: absolute;
+  bottom: 97px;
+  left: 0;
+  z-index: 2;
 }
+
+.header_form {
+  max-width: 460px;
+  float: right;
+  text-align: center;
+}
+.header_form .button_form_modal {
+  max-width: 100%;
+  min-width: 100%;
+}
+.header_forms_title {
+  font-size: 1.813em;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.2;
+  padding: 0 14px;
+  margin-bottom: 25px;
+}
+.header_forms_title span {
+  color: #a0d936;
+}
+.block_1.block_1_1 {
+  background: #1c232d;
+  height: auto;
+}
+.block_1.block_1_1 .header_form {
+  margin: 0 auto;
+  float: none;
+}
+
 
 /* Block 2 (Content) */
 .block_2 {

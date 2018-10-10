@@ -61,10 +61,22 @@
         margin: 15px;
         width: calc(100% - 30px);
     }
+    .advantage-block {
+        min-height: 200px;
+    }
 }
 
 /* Большие девайсы (десктопы, <= 991px) */
 @media only screen and (max-width: 991px) { 
+    .mov {
+        opacity: 1;
+    }
+    .mov_p > p {
+        opacity: 1;
+    }
+    .mov_div > div {
+        opacity: 1;
+    }
     .gallery .col {
         min-width: 100%;
     }
@@ -78,12 +90,8 @@
         z-index: 5;
     }
     .block_1 {
-        background-image: url(../img/bac_1.jpg) no-repeat;
-        background-color: #1c232d;
-        background-position: center;
-        background-size: cover;
         margin-top: -62px;
-        height: 100vh;
+        height: calc(100vh + 62px);
         text-align: center;
     }
     .block_1 .title {
@@ -374,6 +382,11 @@
         display: none;
     }
 
+    .advantage-block {
+        min-height: auto;
+        padding-top: 30px;
+    }
+
 }
 
 }
@@ -472,6 +485,13 @@
     .block_1 .title {
         margin-bottom: 30px;
         margin-top: 62px;
+    }
+    .row_slider_doc {
+        padding: 0 15px;
+        margin-top: 35px;
+    }
+    .item_slider img {
+        max-width: 100%;
     }
 }
 

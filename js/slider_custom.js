@@ -34,6 +34,7 @@
           {
             breakpoint: 470,
             settings: {
+              slidesToShow: 1,
               arrows: false,
             }
           },

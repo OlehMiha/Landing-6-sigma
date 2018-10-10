@@ -38,6 +38,7 @@
         $('.button_mobi_menu').addClass("active");
         $('.menu_scrollbar').addClass("active");
         $('.menu_div').addClass("scroll");
+        $(".menu_div_off").css('display', 'block');
 
         setTimeout(function() {
             $('.menu_top').addClass("active");
@@ -198,7 +199,6 @@ $('.click_tile_js').on('click', function (e) {
 
 //анимация на моб    
 if(width_el <= 991){
-
     $('.advantage-block').removeClass('mov mov_next_fadeInLeft');
     $('.advantage-block').removeClass('mov mov_next_fadeInRight');
 }
@@ -314,7 +314,7 @@ if(width_el <= 991){
         });
     }
 
-    if(width_el > 1094){
+    if(width_el > 991){
         go_animated_scroll();
     }
 
@@ -328,7 +328,7 @@ if(width_el <= 991){
             $(".menu_div_off").css('display', 'none');
         }
 
-        if(width_el > 1094){
+        if(width_el > 991){
             go_animated_scroll();
         }
     });
@@ -353,6 +353,23 @@ $("#manedj_form").submit(function() {
         
         th.trigger("reset");
         $('#exampleModal_1').modal('toggle');
+        setTimeout(function() {
+            $('#sps').modal('toggle');
+        },250);
+    });
+    return false;
+});
+
+$(".header_form").submit(function() {
+
+    var th = $(this);
+    $.ajax({
+        type: "POST",
+        url: "zakaz.php", 
+        data: th.serialize()
+    }).done(function() {
+        
+        th.trigger("reset");
         setTimeout(function() {
             $('#sps').modal('toggle');
         },250);
