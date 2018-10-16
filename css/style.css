@@ -928,9 +928,6 @@ ul.icon_ul li:hover .p1 {
 
 /* Block 4.1 (Content) */
 .block_4_1 {
-  background: url("../img/bac_4.png") no-repeat;
-  background-size: 100%;
-  background-position:center;
   padding-top: 67px;
   padding-bottom: 76px;
 }
